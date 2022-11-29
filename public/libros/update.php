@@ -30,7 +30,6 @@ function mostrarError($error)
 }
 
 if (isset($_POST['btn'])) {
-    $isbnaux = $libro->isbn;
     $error = false;
     $titulo = trim($_POST['titulo']);
     $isbn = trim($_POST['isbn']);
@@ -51,7 +50,7 @@ if (isset($_POST['btn'])) {
 
     if (!in_array($autor, $idAutores)) {
         $error = true;
-        $_SESSION['autor'] = "**** El autor propuesto no se encuentra en la base de datos";
+        $_SESSION['autor'] = "**** El autor propuesto no se editencuentra en la base de datos";
     }
 
     if (!preg_match('/^[0-9]{13}/', $isbn)) {
