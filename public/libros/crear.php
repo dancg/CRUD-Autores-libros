@@ -67,7 +67,7 @@ if (isset($_POST['btn'])) {
     // Comprobar portada
     $portada = Tools::getImages();
 
-    $nombrePortada = "./../img/default.png";
+    $nombrePortada = "/img/default.png";
 
     if ($_FILES['portada']['error'] == 0) {
         if (!in_array($_FILES['portada']['type'], $portada)) {
@@ -78,7 +78,7 @@ if (isset($_POST['btn'])) {
         }
         $nombrePortada = "/img/" . uniqid() . "-" . "{$_FILES['portada']['name']}";
         if (!move_uploaded_file($_FILES['portada']['tmp_name'], __DIR__ . "/..$nombrePortada")) {
-            $nombrePortada = "./../img/default.jpg";
+            $nombrePortada = "/img/default.jpg";
         }
     }
 
