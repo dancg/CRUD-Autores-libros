@@ -1,0 +1,21 @@
+{
+    "name": "daniel/pdobiblioteca",
+    "description": "Ejercicio Biblioteca",
+    "type": "project",
+    "license": "gnu/gpl",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniel Calatrava González",
+            "email": "dannycalgon@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "fakerphp/faker": "^1.20"
+    }
+}
